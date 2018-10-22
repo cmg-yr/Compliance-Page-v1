@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="DataController">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE, NOSNIPPET, NOIMAGEINDEX">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link href="/src/css/fonts.css" rel="stylesheet">
+
+    <!-- angular -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-animate.min.js"></script>
+
+    <!-- bootstrap -->
+    <link ng-href="{{theme}}" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    <title>Terms &amp; Conditions</title>
+</head>
+
+<body ng-cloak>
+
+    <header></header>
+
+    <div class="container" style='padding-top: 30px'>
+
+            <h1>{{product.LLC}} - Terms and Conditions</h1>
+
+            <p>
+                <br/>{{misc.currentYear}} {{product.LLC}} - All Rights Reserved
+                <br/>{{product.name}}
+                <br/>{{product.phoneNumber}}
+                <br/>{{product.address}}
+                <br/>{{product.email}}
+            </p>
+    
+            <p>CAREFULLY READ AND UNDERSTAND THESE TERMS BEFORE ORDERING ANY PRODUCT THROUGH THIS WEBSITE</p>
+    
+            <p>{{product.bank.agreeStatement}}</p>
+    
+            <p>
+                ATTENTION: This is a legal agreement (the "Agreement") between You, the individual, company or organization ("You", "Your", or "Customer") and {{product.name}} ("We", "Our", or "Company").
+                By ordering, accessing, using or purchasing {{product.name}} ("Product") through this website or related websites (collectively the "Website"), you are agreeing to be bound
+                by, and are becoming a party to, this Agreement. We may at our sole and absolute discretion change, add, modify, or delete portions of this Agreement at any time without
+                notice. It is your sole responsibility to review this Agreement for changes prior to use of the Website or purchase of the Product.
+            </p>
+    
+            <h3>Cancellation Policy.</h3>
+    
+            <p>
+                Once an order has been submitted your credit card will be charged. Our ordering process is streamlined so your order will immediately be sent to processing and then shipping. Due to
+                the high volume of orders we receive we will be unable to cancel an order after submitted. The customers DO NOT have to return the trial bottle back if they cancel within
+                the {{product.totalLength}} day trial period. Please order carefully.
+            </p>
+    
+            <h3>30 Day Return Policy:</h3>
+    
+            <p>
+                We take great pride in the superior quality of our products and want you to be pleased with your purchase. We believe in offering the very best value, quality and selection to our customers.
+                You may return any unused and unopened item purchased from us for any reason within Thirty (30) days of your purchase.
+            </p>
+    
+            <p>
+                If you have any questions or concerns regarding the return policy, or if you would like to return the product, please do not hesitate to contact one of our professional customer service
+                representatives, toll free at {{product.phoneNumber}}.
+            </p>
+    
+            <p>
+                Your complete satisfaction is our ultimate goal. You may return any item shipped by Company, keeping the following in mind:
+            </p>
+    
+            <ul class="list_normal">
+                <li>You should return the item to us within 30 days of your purchase date.</li>
+                <li>We do not accept items back that have been opened or used. Opened Items are Non Refundable.</li>
+                <li>Shipping and Handling Fees are Non Refundable.</li>
+                <li><b>If</b> the customer returns the package unopened within 30 days of purchase they are entitled to a full refund.</li>
+            </ul>
+    
+            <p>
+                Shipping and handling charges are non-refundable. For returns via mail, you must carefully package the product, you are responsible for the cost of return shipping, and we must physically
+                receive the return within the 30 day period. Company reserves the right, at its sole discretion, to reject any return that does not comply with these requirements. Once
+                your return has been received, a credit to your card or refund check will be issued and an e-mail confirmation will be sent within 7 - 10 business days.
+            </p>
+    
+            <p>Return Address:
+                <blockquote style='margin-left: 30px'><b>{{misc.returnAddress}}</b></blockquote>
+            </p>
+    
+            <h3>Terms and Conditions for Autoship Customers</h3>
+    
+            <p>
+                Initially, just pay {{product.shippingPrice | currency}} for S&amp;H today to fully evaluate {{product.name}} for {{product.totalLength}} days ({{product.trialLength}} days plus {{product.shippingLength}}
+                days for shipping via USPS). You will be billed as <b>{{product.descriptor}}</b>. If you like the product, simply keep it. Once your trial has ended {{product.totalLength}} days from the initial date,
+                you will be billed {{product.rebillPrice | currency}} unless you cancel your order within {{product.totalLength}} days. Then, every 30 days thereafter (i.e. day {{product.totalLength
+                + 30}}, day {{product.totalLength + 60}} etc.) you will continue in the monthly program and be billed {{product.rebillPrice -2 | currency}} (Free Shipping). 
+                There is no shipping and handling cost for recurring payments. You can cancel any time by emailing {{product.email}} or calling: 
+            </p>
+            <p>
+                US {{product.phoneNumber}}
+            </p>
+    
+            </p>
+            and let us know you would like to cancel and you will not be charged anything other than the initial fee. You can also cancel by filling out our <a href="/cancellation.html" target='_self'>Cancellation Form</a> and providing your contact details and order id. This means that every 30 days you will be shipped a new 1 month supply of {{product.name}}
+            and the low monthly fee will be charged. This is a reoccurring order that will take place each month until you choose to cancel the program. *I UNDERSTAND THAT THIS CONSUMER
+            TRANSACTION INVOLVES A NEGATIVE OPTION, AND THAT I MAY BE LIABLE FOR PAYMENT OF FUTURE GOODS AND SERVICES UNDER THE TERMS OF THIS AGREEMENT IF I FAIL TO NOTIFY THE SUPPLIER
+            NOT TO SUPPLY THE GOODS OR SERVICES DESCRIBED.*
+            </p>
+    
+            <p>You must provide ample time to process any request to cancel recurring charges.</p>
+    
+            <p>
+                You agree by submitting your information for membership to {{product.name}} that the Company's maximum liability is limited to the total amount paid by you for the initial and monthly
+                fees, regardless of extenuating circumstances. If you have any concern regarding the products or services, trials included, or other fees charged, you must elect to not
+                order from this website. By ordering from this website you certify that you have been notified of this limitation of liability and agree with it.</p>
+    
+            <p>
+                If at any time you are unsatisfied with the products or service provided, it is your responsibility to notify Company to allow Company to rectify any problems or cancel your auto-ship
+                program. As this program is provided on a month-to-month basis, it is your responsibility to notify Company prior to payment of monthly fees. Payment of ongoing monthly
+                fees by you shall signify your satisfaction with your membership, previous months billing, and all products and services provided up to that point.</p>
+    
+            <p>
+                You agree to the use of electronic records to evidence this agreement. If you do not agree to the use of electronic records, you must elect to not order from this website. In such event,
+                this will be null and void. Your consent applies to all transactions including monthly fees. You hereby waive any objection you may have to Company's use of electronic records
+                in court should it be necessary to enforce the terms of this agreement.</p>
+    
+            <h3>Legal Disclaimer</h3>
+    
+            <p>
+                Statements made by Company have not been evaluated by the food and drug administration. The FDA does not evaluate or test herbs. These products are not intended to diagnose, treat,
+                cure or prevent any illness or disease. Consult with your physician for diagnosis or treatment. Use herbs as per instructions and always watch for any allergic reactions.
+            </p>
+    
+            <p>
+                The information presented on this site is not presented with the intention of diagnosing any disease or condition or prescribing any treatment. It is offered as information only, for
+                use in the maintenance and promotion of good health in cooperation with a licensed medical practitioner.
+            </p>
+    
+            <p>
+                In the event that any individual should use the information presented on this website without a licensed medical practitioner's approval, that individual will be diagnosing for him
+                or herself.
+            </p>
+    
+            <p>
+                No responsibility is assumed by the author, publisher or distributors of this information should the information be used in place of a licensed medical practitioner's services. No guarantees
+                of any kind are made for the performance or effectiveness of the preparations mentioned on this website. Furthermore, this information is based solely on the traditional
+                and historic use of a given herb, or on clinical trials that are generally not recognized by any US government agency or medical organization.
+            </p>
+    
+            <p>
+                This information has not been evaluated by the US Food and Drug Administration, nor has it gone through the rigorous double-blind studies required before a particular product can be
+                deemed truly beneficial or potentially dangerous and prescribed in the treatment of any condition or disease.
+            </p>
+    
+            
+    
+            <h3>License</h3>
+    
+            <p>
+                All images, text, contents, products and scripts are never sold, unless otherwise stated. Reproduction is prohibited. You may not use, copy, emulate, clone, rent, lease, sell, modify,
+                recompile, disassemble, otherwise reverse engineer, or transfer the licensed program or product or any subset of the licensed program or product, except as provided for
+                in this agreement or expressly in writing. Any such unauthorized use shall result in immediate and automatic termination of this license and may result in criminal and/or
+                civil prosecution.
+            </p>
+    
+        </div>
+
+    </div>
+
+    <footer></footer>
+
+    <!-- app.js -->
+    <script src='/src/js/App.js'></script>
+    <script src="/src/js/DataController.js"></script>
+</body>
+
+</html>

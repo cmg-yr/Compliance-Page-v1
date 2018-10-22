@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app='app' ng-controller='DataController'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE, NOSNIPPET, NOIMAGEINDEX">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link href="/src/css/fonts.css" rel="stylesheet">
+    
+    <!-- angular -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-animate.min.js"></script>
+    
+    <!-- bootstrap -->
+    <link ng-href="{{theme}}" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    <title>Ingredients</title>
+</head>
+
+<body ng-cloak>
+
+    <header></header>
+
+    <div class='container'>
+
+        <br>
+        
+        <h1>{{product.name}}</h1>
+
+        <br>
+
+        <h2>Product Information:</h2>
+
+        <p>60 Capsules</p>
+
+        <h2>Ingredients:</h2>
+
+        <p>
+            {{product.ingredients.main}}
+            <br>
+            <br>
+            {{product.ingredients.other ? 'Other: ' + product.ingredients.other : ''}}
+        </p>
+<!-- 
+        <h2>Suggested Use:</h2>
+
+        <p>{{product.suggestedUse}}</p>
+
+        <br> -->
+
+        <footer></footer>
+    </div>
+
+    <script src='/src/js/App.js'></script>
+    <script src='/src/js/DataController.js'></script>
+</body>
+
+</html>

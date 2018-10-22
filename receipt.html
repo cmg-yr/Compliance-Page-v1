@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html ng-app='app' ng-controller='DataController'>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE, NOSNIPPET, NOIMAGEINDEX">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/src/css/style.css">
+  <link href="/src/css/fonts.css" rel="stylesheet">
+
+  <!-- angular -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-animate.min.js"></script>
+
+  <!-- bootstrap -->
+  <link ng-href="{{theme}}" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+  <title>Receipt</title>
+</head>
+
+<body ng-cloak class='bg-light'>
+
+  <header></header>
+
+  <div class="container">
+
+    <div class='receipt-thankyou'>
+      <h1>Thank you for ordering
+        <b>{{product.name}} !</b>
+      </h1>
+    </div>
+
+    <div class="row h-100">
+
+      <!-- PRODUCT RECEIPT -->
+      <div class='col-md-6'>
+
+        <div class='price-breakdown--product-image bottle-container' style='margin: 0 auto'>
+          <bottle></bottle>
+        </div>
+        <br>
+        <h4>Order date:
+          <b>{{getDate()}}</b>
+        </h4>
+        <h4>Order #:
+          <b>{{orderId}}</b>
+        </h4>
+        <table class='price-breakdown price-breakdown--header'>
+
+          <tr>
+            <td class='price-breakdown--product'>
+              <div>{{product.name}} </div>
+            </td>
+            <td class='price-breakdown--amount'>{{0 | currency }}</td>
+          </tr>
+        </table>
+        <table class='price-breakdown border-top'>
+          <tr>
+            <td class='price-breakdown--label'>Shipping</td>
+            <td class='price-breakdown--amount'>{{product.shippingPrice | currency}}</td>
+          </tr>
+        </table>
+        <table class='price-breakdown border-top'>
+          <tr>
+            <td class='price-breakdown--label'>Total (USD)</td>
+            <td class='price-breakdown--amount'>{{product.shippingPrice | currency}}</td>
+          </tr>
+        </table>
+      </div>
+      <!-- PRODUCT RECEIPT -->
+
+      <!-- CUSTOMER INFO -->
+      <div class="col-md-6 align-self-center">
+        <h2>
+          <b>Customer support: {{product.phoneNumber}}</b>
+        </h2>
+        <div>
+          <h2>Please allow {{product.shippingLength}} days for shipping via USPS.</h2>
+        </div>
+        <br>
+        <div>
+          <h3>Customer Information:</h3>
+          <h5>Address:</h5>
+          <p>
+            {{session.firstName}} {{session.lastName}}
+          </p>
+          <p>
+            {{session.address}}
+            <br> {{session.city}}
+            <br> {{session.state}}
+            <br> {{session.zip}}
+            <br> United States
+          </p>
+          <h5>Contact:</h5>
+          <p>
+            {{session.phone}}
+            <br> {{session.email}}
+          </p>
+        </div>
+      </div>
+      <!-- CUSTOMER INFO -->
+
+    </div>
+  </div>
+
+  <footer></footer>
+
+  <script src="/src/js/App.js"></script>
+  <script src="/src/js/DataController.js"></script>
+</body>
+
+</html>

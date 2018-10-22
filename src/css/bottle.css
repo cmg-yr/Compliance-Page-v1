@@ -1,0 +1,22 @@
+.bottle-container {
+  width: 163px;
+  height: 270px;
+}
+
+.bottle-image {
+  position: absolute;
+  z-index: 10;
+  width: 163px;
+}
+
+.bottle-label {
+  position: relative;
+  color: black;
+  text-align: center;
+  word-wrap: break-word;
+  z-index: 15;
+  top: 88px;
+  left: 19px;
+  font-size: 25px;
+  width: 130px;
+}

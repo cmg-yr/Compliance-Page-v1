@@ -1,0 +1,15 @@
+{
+  "backgroundColor": "lightgrey",
+  "bannerColor": "lightgrey",
+  "headerFontIndex": 40,
+  "spinner": "far fa-compass fa-spin fa-3x",
+  "position": [
+    1,
+    3,
+    2
+  ],
+  "bottle": 7,
+  "flexDirection": "row",
+  "descriptionWidth": "436px",
+  "theme": 4
+}

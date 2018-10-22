@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html ng-app="app" ng-controller="DataController">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE, NOSNIPPET, NOIMAGEINDEX">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link href="/src/css/fonts.css" rel="stylesheet">
+
+    <!-- angular -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-animate.min.js"></script>
+
+    <!-- bootstrap -->
+    <link ng-href="{{theme}}" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+    <title>Contact</title>
+</head>
+
+<body ng-cloak>
+
+    <header></header>
+
+    <div class='container' style='padding-top: 30px'>
+
+        <h2>Contact Us</h2>
+
+        <br/>
+
+        <p>We are committed to providing each of our valued clients excellent customer service. If you have any questions or concerns, please do not hesitate to contact one of our professional
+            customer service representatives, toll free at {{product.phoneNumber}}.</p>
+        <br/>
+
+        <h3>Availability</h3>
+        <span>{{misc.callAvailability}}</span>
+
+        <br>
+
+        <br>{{product.name}}
+        <br/>{{product.LLC}}
+        <br/>{{product.address}}
+        <br/>{{product.email}}
+        <br/>{{product.phoneNumber}}
+
+        <br/>
+        <br>
+
+        <h3>Return Address</h3>
+        <p>
+            <b>{{misc.returnAddress}}</b>
+        </p>
+        <br/>
+
+
+    </div>
+    <!-- outer_wrapper -->
+
+    <footer></footer>
+
+    <!-- app.js -->
+    <script src='/src/js/App.js'></script>
+    <script src="/src/js/DataController.js"></script>
+
+</body>
+
+</html>

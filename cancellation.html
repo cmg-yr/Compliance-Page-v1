@@ -1,0 +1,48 @@
+<form name="contactform" method="post" action="send_form_email.php">
+<style>
+body {
+ font-family: arial;
+     padding-top: 100px;
+     display: flex;
+     justify-content: center;
+}
+</style>	
+<h1>Cancellation Form</h1>
+<p>Please fill out the information below to cancel your order.</p>    
+    
+<table width="450px">
+<tr>
+ 
+ <td valign="top">
+  <input  type="text" name="email" placeholder="Email Address" maxlength="80" size="30" data-required-error="Email Required"
+            data-regex="email" data-regex-error="Invalid Email" required />
+ </td>
+</tr>
+<br>
+<tr>
+ 
+ <td valign="top">
+  <input  type="text" name="telephone" placeholder="Phone Number" maxlength="50" size="30"data-required-error="Phone Number Required"
+            data-regex="telephone" data-regex-error="Invalid Phone Number" required />
+ </td>
+</tr>
+<br>
+
+
+<tr>
+ 
+ <td valign="top">
+  <input  type="text" name="order" placeholder="Order Number" maxlength="50" size="30" data-required-error="Order Number Required"
+            data-regex="order" data-regex-error="Invalid Order Number" required />
+ </td>
+</tr>
+<br>
+<tr>
+ <td colspan="2" style="text-align:left">
+  <input type="submit" value="Submit" style="background-color: #f6770b; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px;">   <a href="www.support-your-delighted-living.com"></a>
+ </td>
+</tr>
+
+
+</table>
+</form>

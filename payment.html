@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html ng-app='app' ng-controller='DataController'>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE, NOSNIPPET, NOIMAGEINDEX">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/src/css/style.css">
+  <link href="/src/css/fonts.css" rel="stylesheet">
+
+  <!-- angular -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-animate.min.js"></script>
+
+  <!-- bootstrap -->
+  <link ng-href="{{theme}}" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel='stylesheet'>
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+  <title>Payment</title>
+</head>
+
+<body ng-cloak>
+
+  <popup></popup>
+
+  <div class="content bg-light">
+
+    <header></header>
+
+    <div class="container payment-container">
+      <div class="row">
+
+        <div class="col-md-6 checkout-container">
+
+          <div class='card card-body'>
+            <div class='price-breakdown--product-image bottle-container' style='margin: 0 auto'>
+              <bottle></bottle>
+            </div>
+            <div class='option-info'>
+              <p>
+                <!-- <b>{{product.description}}</b><br> -->
+                Includes 1 bottle (30 day supply) of
+                <b>{{product.name}} </b>
+              </p>
+            </div>
+            <table class='price-breakdown price-breakdown--header'>
+              <tr>
+                <td class='price-breakdown--product'>
+                  <div>{{product.name}} </div>
+                </td>
+                <td class='price-breakdown--amoun text-right'>
+                  <!-- <span class='regular-price' ng-if='current.option.price.regular !== brand.product.basePrice'>{{(brand.product.basePrice * current.option.quantity) | currency}}</span> -->
+                  {{0 | currency }}
+                </td>
+              </tr>
+            </table>
+            <table class='price-breakdown border-top'>
+              <tr>
+                <td class='price-breakdown--label'>Shipping</td>
+                <td class='price-breakdown--amount'>{{product.shippingPrice | currency}}</td>
+              </tr>
+            </table>
+            <table class='price-breakdown border-top'>
+              <tr>
+                <td class='price-breakdown--label'>
+                  <b>Total (USD)</b>
+                </td>
+                <td class='price-breakdown--amount'>
+                  <b>{{product.shippingPrice | currency}}</b>
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="card card-body bg-white" style='margin-top: 30px;'>
+            <!-- <img class='img-fluid' src="/assets/images/usps.png" alt="usps-logo"> -->
+            <div class='terms-of-sale'>
+              <p>
+                I agree I will be billed as {{product.descriptor}}. Unless you cancel before the end of your trial period as specified above (within ({{product.totalLengthWritten}}) {{product.totalLength}}
+                days ({{product.trialLength}} days plus {{product.shippingLength}} days for shipping {{product.shippingPrice | currency}} Shipping and Handling) after placing your order),
+                you will automatically be enrolled in {{product.descriptor}}’s Auto-Ship program and a charge of {{product.rebillPrice | currency}} will be applied to your credit card
+                on day {{product.totalLength +1}}. Then every 30 days thereafter (i.e. day {{product.totalLength + 30}}, day {{product.totalLength
+                + 60}} etc.), you will continue to be enrolled in the monthly program and charged an additional {{product.rebillPrice | currency}} (Free Shipping), to the credit card
+                maintained on file. You may cancel any time by calling {{product.phoneNumber}} or emailing {{product.email}}. You can also cancel by filling out our <a href="/cancellation.html" target='_self'>Cancellation Form</a> and providing your contact details and order id. Your request for cancellation will be processed immediately;
+                however, you will be responsible for any charges, billing or shipments that have already been shipped to you or that have already been delivered to you at the time of
+                your cancellation. All requests for cancellation requests will receive a cancellation confirmation number. Please keep this number for your records. Any future discrepancies
+                resulting from not having a cancellation confirmation number will be at the discretion of {{product.descriptor}}.
+              </p>
+            </div>
+          </div>
+
+        </div>
+        <!-- PRICE BREAKDOWN -->
+
+        <div class="col-md-6 checkout-container">
+          <div class='card card-body'>
+            <form class="SysForm" ng-submit="payment()">
+
+              <h2>Payment Information</h2>
+
+              <br>
+
+              <div class="form-group text-center">
+                <table>
+                  <tr>
+                    <tr>We Accept: </tr>
+                    <tr>
+                      <img src="/assets/images/cards.png" alt="accepted-cards" height='50px'>
+                    </tr>
+                  </tr>
+                </table>
+              </div>
+
+              <div class="form-group">
+                <input type="tel" class="form-control" name='creditCardNumber' pattern="\d*.{16,16}" ng-model='form.creditCard.number' minlength='16' maxlength='16' placeholder='Credit Card Number'
+                  required>
+              </div>
+
+              <div class="form-group">
+                <select class="form-control" name="creditCardType" ng-model='form.creditCard.type' required>
+                  <option value="" selected disabled>Card Type</option>
+                  <option value='visa' onclick=''>Visa</option>
+                  <option value='master' onclick=''>Master Card</option>
+                  <option value='discover' onclick=''>Discover</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <div class="row">
+                  <div class="col">
+                    <select class='form-control' name="creditCardMonth" ng-model='form.creditCard.month' required>
+                      <option value="" selected disabled>Expiry Month</option>
+                      <option value="01">January</option>
+                      <option value="02">February</option>
+                      <option value="03">March</option>
+                      <option value="04">April</option>
+                      <option value="05">May</option>
+                      <option value="06">June</option>
+                      <option value="07">July</option>
+                      <option value="08">August</option>
+                      <option value="09">September</option>
+                      <option value="10">October</option>
+                      <option value="11">November</option>
+                      <option value="12">December</option>
+                    </select>
+                  </div>
+                  <div class="col">
+                    <select class='form-control' name="creditCardYear" ng-model='form.creditCard.year' required>
+                      <option value="" selected disabled>Expiry Year</option>
+                      <option value="18">2018</option>
+                      <option value="19">2019</option>
+                      <option value="20">2020</option>
+                      <option value="21">2021</option>
+                      <option value="22">2022</option>
+                      <option value="23">2023</option>
+                      <option value="24">2024</option>
+                      <option value="25">2025</option>
+                      <option value="26">2026</option>
+                      <option value="27">2027</option>
+                    </select>
+                  </div>
+                  <div class="col">
+                    <input type="tel" minlength='3' maxlength='3' class="form-control" pattern="\d*.{3,3}" name='creditCardCVV' ng-model='form.creditCard.cvv' placeholder='CVV' required>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group text-right">
+                <a href='#' ng-model='showCvv' ng-mouseover='showCvv = true' ng-mouseleave="showCvv = false">Whats this?</a>
+                <div ng-show='showCvv'>
+                  <img src="/assets/images/cvv.png" alt="cvv">
+                </div>
+              </div>
+
+              <div class='form-terms-containe'>
+
+                <div class='form-group'>
+                  <div class="form-check form-check-inline">
+                    <label for="accept-terms" class="form-check-label">
+                      <input class='form-check-input' type="checkbox" id='accept-terms' required> I agree to the Refund, Cancellation, and Return policies as clearly outlined in the
+                      <a href="/terms.html" target='_self'>Terms and Conditions
+                      </a> and
+                      <a href="/privacy.html" target='_self'>Privacy Policy</a>.
+                    </label>
+                  </div>
+                </div>
+
+                <div class='form-group'>
+                  <div class="form-check form-check-inline">
+                    <label for="accept-terms-2" class="form-check-label">
+                      <input class='form-check-input' type="checkbox" id='accept-terms-2' required> I agree I will be billed as {{product.descriptor}}, {{product.shippingPrice | currency}} for S&H and if I don't cancel within the {{product.totalLength}} days
+                      ({{product.trialLength}} + {{product.shippingLength}} days shipping) of the trial period, I will be billed the full amount of {{product.rebillPrice | currency}}
+                      for the product on day {{product.totalLength +1}} and every 30 days thereafter (i.e. day {{product.totalLength + 30}}, day {{product.totalLength + 60}} etc.). There
+                      is no shipping and handling cost for recurring payments. To cancel my subscription, please call {{product.phoneNumber}} or email {{product.email}} or fill out this site's <a href="/cancellation.html" target='_self'>Cancellation Form</a>.
+                    </label>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="form-group text-right">
+                <input type="submit" class="btn payment-form-button btn-primary" value='Purchase'>
+              </div>
+
+              <div class='form-group'>
+                <div style='width: 70%; margin: 0 auto' class='text-center'>
+                  <img class='img-fluid' src="/assets/images/secured.png" alt="secured ssl connection">
+                  <img class='img-fluid' src='/assets/images/usps.png' alt='usps logo' style='max-width: 200px; margin-top: 20px'>
+                  <img class='img-fluid' src='/assets/images/flag.png' alt='usps logo' style='max-width: 250px; margin-top: 20px'>
+                </div>
+              </div>
+
+            </form>
+          </div>
+        </div>
+        <!-- FORM CONTAINER -->
+
+      </div>
+    </div>
+    <!-- CONTAINER -->
+
+  </div>
+
+  <footer></footer>
+  <!-- <spinner></spinner> -->
+
+
+  <script src='/src/js/App.js'></script>
+  <script src='/src/js/DataController.js'></script>
+</body>
+
+</html>
