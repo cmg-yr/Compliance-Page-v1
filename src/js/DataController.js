@@ -57,7 +57,7 @@ app.controller('DataController', ($scope, $http, $interpolate, $location) => {
     $scope.popup.showProcessing()
     sessionStorage.form = JSON.stringify($scope.form)
 
-    window.location.href = `/payment.html`
+    window.location.href = `payment.html`
   }
 
   $scope.payment = () => {
@@ -76,7 +76,7 @@ app.controller('DataController', ($scope, $http, $interpolate, $location) => {
       return
     }
 
-    window.location.href = `/receipt.html?orderId=10285`
+    window.location.href = `receipt.html?orderId=10285`
 
   }
 
@@ -97,10 +97,10 @@ app.controller('DataController', ($scope, $http, $interpolate, $location) => {
   // Initialization
   // ==========================================
 
-  $http.get('/config/style.json').then(response => {
+  $http.get('config/style.json').then(response => {
     $scope.style = Object.assign($scope.style, response.data)
 
-    $http.get('/config/fonts.json').then(response => {
+    $http.get('config/fonts.json').then(response => {
       const fonts = response.data
       $scope.style.headerFont = `'${fonts[$scope.style.headerFontIndex].font}', 'Arial'`
     })
@@ -111,13 +111,13 @@ app.controller('DataController', ($scope, $http, $interpolate, $location) => {
     })
   })
 
-  $http.get('/config/data.json').then(response => {
+  $http.get('config/data.json').then(response => {
     $scope.orderId = $location.search().orderId || ''
 
     $scope.product = response.data
     // $scope.product.description = $interpolate($scope.product.description)($scope)
 
-    $http.get('/config/ingredients.json').then(response => {
+    $http.get('config/ingredients.json').then(response => {
       $scope.product.ingredients = response.data[$scope.product.ingredients]
     })
   })

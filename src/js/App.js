@@ -12,30 +12,30 @@ app
   .directive('bottle', () => {
     return {
       restrict: 'E',
-      templateUrl: '/src/components/Bottle.html'
+      templateUrl: 'src/components/Bottle.html'
     }
   })
   .directive('header', () => {
     return {
       restrict: 'E',
-      templateUrl: '/src/components/Header.html'
+      templateUrl: 'src/components/Header.html'
     }
   })
   .directive('footer', () => {
     return {
       restrict: 'E',
-      templateUrl: '/src/components/Footer.html'
+      templateUrl: 'src/components/Footer.html'
     }
   })
   .directive('optionBox', () => {
     return {
       restrict: 'E',
-      templateUrl: '/src/components/Option.html'
+      templateUrl: 'src/components/Option.html'
     }
   })
   .directive('popup', () => {
     return {
       restrict: 'E',
-      templateUrl: '/src/components/Popup.html'
+      templateUrl: 'src/components/Popup.html'
     }
   })

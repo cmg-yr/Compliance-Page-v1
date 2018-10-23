@@ -8,8 +8,8 @@
   <meta name="ROBOTS" content="NOINDEX, NOFOLLOW, NOARCHIVE, NOSNIPPET, NOIMAGEINDEX">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/src/css/style.css">
-  <link href="/src/css/fonts.css" rel="stylesheet">
+  <link rel="stylesheet" href="src/css/style.css">
+  <link href="src/css/fonts.css" rel="stylesheet">
 
   <!-- angular -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js"></script>
@@ -87,7 +87,7 @@
                 you will automatically be enrolled in {{product.descriptor}}’s Auto-Ship program and a charge of {{product.rebillPrice | currency}} will be applied to your credit card
                 on day {{product.totalLength +1}}. Then every 30 days thereafter (i.e. day {{product.totalLength + 30}}, day {{product.totalLength
                 + 60}} etc.), you will continue to be enrolled in the monthly program and charged an additional {{product.rebillPrice | currency}} (Free Shipping), to the credit card
-                maintained on file. You may cancel any time by calling {{product.phoneNumber}} or emailing {{product.email}}. You can also cancel by filling out our <a href="/cancellation.html" target='_self'>Cancellation Form</a> and providing your contact details and order id. Your request for cancellation will be processed immediately;
+                maintained on file. You may cancel any time by calling {{product.phoneNumber}} or emailing {{product.email}}. You can also cancel by filling out our <a href="cancellation.html" target='_self'>Cancellation Form</a> and providing your contact details and order id. Your request for cancellation will be processed immediately;
                 however, you will be responsible for any charges, billing or shipments that have already been shipped to you or that have already been delivered to you at the time of
                 your cancellation. All requests for cancellation requests will receive a cancellation confirmation number. Please keep this number for your records. Any future discrepancies
                 resulting from not having a cancellation confirmation number will be at the discretion of {{product.descriptor}}.
@@ -111,7 +111,7 @@
                   <tr>
                     <tr>We Accept: </tr>
                     <tr>
-                      <img src="/assets/images/cards.png" alt="accepted-cards" height='50px'>
+                      <img src="assets/images/cards.png" alt="accepted-cards" height='50px'>
                     </tr>
                   </tr>
                 </table>
@@ -174,7 +174,7 @@
               <div class="form-group text-right">
                 <a href='#' ng-model='showCvv' ng-mouseover='showCvv = true' ng-mouseleave="showCvv = false">Whats this?</a>
                 <div ng-show='showCvv'>
-                  <img src="/assets/images/cvv.png" alt="cvv">
+                  <img src="assets/images/cvv.png" alt="cvv">
                 </div>
               </div>
 
@@ -184,9 +184,9 @@
                   <div class="form-check form-check-inline">
                     <label for="accept-terms" class="form-check-label">
                       <input class='form-check-input' type="checkbox" id='accept-terms' required> I agree to the Refund, Cancellation, and Return policies as clearly outlined in the
-                      <a href="/terms.html" target='_self'>Terms and Conditions
+                      <a href="terms.html" target='_self'>Terms and Conditions
                       </a> and
-                      <a href="/privacy.html" target='_self'>Privacy Policy</a>.
+                      <a href="privacy.html" target='_self'>Privacy Policy</a>.
                     </label>
                   </div>
                 </div>
@@ -197,7 +197,7 @@
                       <input class='form-check-input' type="checkbox" id='accept-terms-2' required> I agree I will be billed as {{product.descriptor}}, {{product.shippingPrice | currency}} for S&H and if I don't cancel within the {{product.totalLength}} days
                       ({{product.trialLength}} + {{product.shippingLength}} days shipping) of the trial period, I will be billed the full amount of {{product.rebillPrice | currency}}
                       for the product on day {{product.totalLength +1}} and every 30 days thereafter (i.e. day {{product.totalLength + 30}}, day {{product.totalLength + 60}} etc.). There
-                      is no shipping and handling cost for recurring payments. To cancel my subscription, please call {{product.phoneNumber}} or email {{product.email}} or fill out this site's <a href="/cancellation.html" target='_self'>Cancellation Form</a>.
+                      is no shipping and handling cost for recurring payments. To cancel my subscription, please call {{product.phoneNumber}} or email {{product.email}} or fill out this site's <a href="cancellation.html" target='_self'>Cancellation Form</a>.
                     </label>
                   </div>
                 </div>
@@ -210,9 +210,9 @@
 
               <div class='form-group'>
                 <div style='width: 70%; margin: 0 auto' class='text-center'>
-                  <img class='img-fluid' src="/assets/images/secured.png" alt="secured ssl connection">
-                  <img class='img-fluid' src='/assets/images/usps.png' alt='usps logo' style='max-width: 200px; margin-top: 20px'>
-                  <img class='img-fluid' src='/assets/images/flag.png' alt='usps logo' style='max-width: 250px; margin-top: 20px'>
+                  <img class='img-fluid' src="assets/images/secured.png" alt="secured ssl connection">
+                  <img class='img-fluid' src="assets/images/usps.png" alt='usps logo' style='max-width: 200px; margin-top: 20px'>
+                  <img class='img-fluid' src="assets/images/flag.png" alt='usps logo' style='max-width: 250px; margin-top: 20px'>
                 </div>
               </div>
 
@@ -231,8 +231,8 @@
   <!-- <spinner></spinner> -->
 
 
-  <script src='/src/js/App.js'></script>
-  <script src='/src/js/DataController.js'></script>
+  <script src="src/js/App.js"></script>
+  <script src="src/js/DataController.js"></script>
 </body>
 
 </html>
