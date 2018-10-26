@@ -1,0 +1,149 @@
+.ib{display:inline-block;vertical-align: top;}
+.tac{text-align: center;}
+body{margin:0;padding:0;font-family:'Arial', Helvetica, sans-serif;}
+.btop {
+    border-top: 1px solid lightgrey;
+}
+h1#rthanks {
+    font-style: italic;
+    margin-top: 0;
+    padding-top: 20px;
+}
+#rcontent {
+    width: 960px;
+    margin: 0 auto;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.order-date {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.shipmentnumber {
+    margin-top: 10px;
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+.bottleanddescription {
+    width: 860px;
+    margin: 0 auto;
+}
+img.imagebox {
+    width: 200px;
+    margin: 10px 0;
+}
+.descriptioncontain p {
+    margin: 0;
+    line-height: 30px;
+}
+.descriptioncontain.ib {
+    font-size: 25px;
+    margin-top: 70px;
+    margin-left: 200px;
+    width: 425px;
+}
+.descriptioncontain p.description {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#subtotal p.totals {
+    display: inline-block;
+    margin: 0;
+}
+.totalamounts {
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 24px;
+}
+div#subtotal {
+    width: 400px;
+    margin: 20px 0;
+    margin-left: 488px;
+}
+#subtotal p.description.totals {
+    width: 270px;
+    font-weight: bold;
+    font-size: 25px;
+}
+p.rprice.totals {
+    font-size: 25px;
+}
+div.sandb {
+    margin-left: 64px;
+    font-size: 25px;
+}
+p.infotitle {
+    font-weight: bold;
+    font-size:25px;
+}
+
+#shipping h5{
+    font-size:25px;
+}
+
+div#receiptL {
+    /*width: 310px;*/
+    /*margin-top: 20px;*/
+    /*margin-right: 40px;*/
+    /*border: 1px solid lightgrey;*/
+    /*margin-left: 427px;*/
+}
+div#receiptR {
+    width: 600px;
+}
+div.bottlewrap {
+    width: 200px;
+    text-align: center;
+}
+.imagebox image{
+    margin-top:20px;
+    max-width:200px;
+    max-height:200px;
+    margin-left:20px;
+}
+
+div.footer{
+    margin: -20px auto 0 auto;
+}
+
+div.footer p{
+    font-size:9px;
+}
+
+div.container.ma{
+    width: 702px;
+    margin: 0 auto;
+    background: #8FCB9B;
+    font-size:12px;
+}
+
+div.top{
+    padding: 5px 10px 0 15px;
+}
+
+div.bottom.ng-scope{
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+/*@media only screen and (max-width: 769px){*/
+/*    div.container.ma{*/
+/*        width: 702px;*/
+/*        margin: 0 auto;*/
+/*        background: #747474 !important;*/
+/*        font-size: 9px;*/
+/*        color:white;*/
+/*    }*/
+    
+/*   p.ng-binding.ng-scope{*/
+/*        text-align:center;*/
+/*    }*/
+/*}*/
+
+

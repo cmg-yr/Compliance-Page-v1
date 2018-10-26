@@ -1,0 +1,477 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	margin:auto;
+	padding:0;
+	text-align:center;	
+	font-family: 'Roboto', sans-serif;		
+}
+/*
+START UTILITY
+*/
+div, ul, h1, h2, h3, h5,li, p, img, form, input, textarea {
+	margin:0;
+	padding:0;
+}
+
+a {
+    outline: none;
+	color:#ffde00;
+	text-decoration:underline;
+}
+
+a:hover {
+    outline: none;
+	color:#ffde00;
+	text-decoration:none;
+}
+img {
+	border:none;
+}
+
+li {
+	list-style:none;
+}
+
+.clearall {
+	clear:both;
+	font-size:1px;
+	line-height:1px;
+	height:1px;
+}
+
+/*
+END UTILITY*/
+div#container{
+	height:auto;
+}
+.contentWrap {
+	width: 1000px;
+	margin: 0 auto;
+	min-width: 1000px;
+}
+.trialupper{
+	background-image: url(../images/sec-onebg.jpg), url(../images/trial-bg.jpg);
+    background-position: center top, left top;
+    background-repeat: no-repeat, repeat-x;
+	display:table;
+	margin:0 auto;
+	width:100%;
+	min-width:960px;
+	height:auto;
+	padding:0 0 30px 0;
+}
+.tiralhdr{
+	height:70px;
+	clear:both;
+	margin:0 auto;
+	padding:0;	
+}
+div#tiralmid{
+	width:1000px;
+	height:auto;	
+	display:table;
+	margin:6px 0 0 0;
+	
+}
+div#tiralmid .lftcontent, div#tiralmid .rgtform{
+	float:left;
+	display:inline-block;
+	height:auto;	
+}
+div#tiralmid .lftcontent{	
+	width:620px;
+	margin:18px 0 0 0;
+	border:1px solid #d0d4ba;
+	background:#ffffff;
+	padding-bottom:20px;
+}
+.lfthding{
+	margin:16px auto 0 auto;
+	display:block;
+}
+.approvetxt{
+	font-size:18px;
+	color:#717171;
+	text-align:left;
+	line-height:24px;
+	margin:6px auto 0 20px;
+	margin-top: 0;
+	padding:15px 10px 13px 35px;
+	background:url(../images/greentik.png) 10px 19px no-repeat;
+	width:534px;
+	letter-spacing:-0.4px;
+	border-bottom:2px solid #cccccc;
+}
+.approvetxt span{
+	color:#55b907;	
+	text-transform:uppercase;
+	font-weight:bold;	
+	font-size:18px;
+}
+.approvetxt b{
+	color:#464646;	
+	font-weight:700;
+	font-size:18px;
+}
+.productbox{
+	width:100%;
+	margin:16px 0 0 0;
+	padding:0;	
+	clear:both;
+	display:table;
+	padding:0;
+}
+.lftbtl, .rgtdetail{
+	float:left;
+	display:inline-block;
+}
+.lftbtl{
+	width:210px;
+	margin-right:0;	
+}
+.rgtdetail{
+	width:384px;
+}
+.rgtdetailtxt1, .lft-text-btm2{	
+	font-family: 'Open Sans', sans-serif;		
+	font-size:14px;
+	color:#282828;
+	text-align:left;
+	line-height:18px;
+	padding:0 0 0 0;
+	font-weight:bold;
+	font-style:italic;
+}
+.rgtdetailtxt1 span{	
+	font-size:20px;
+	color:#a42a5b;
+	line-height:29px;
+	font-style:normal;	
+}
+.lft-text-btm2{		
+	margin:0 0 0 0;
+}
+.lft-text-btm2 span{
+	color:#ff0000;
+	font-weight:bold;
+}	
+.rgttblarea{
+	margin:10px 0 10px 0;
+	width:100%;
+	}
+.triallftimg{
+	float:left;
+	margin:-15px 0 0 338px;
+	clear:both;
+}
+.tbltxt{
+	font-family: 'Open Sans', sans-serif;
+	font-size:14px;
+	color:#464646;
+	text-align:left;
+	line-height:24px;
+	padding:0 5px 0 5px
+	
+}
+.lftrow{
+	width:84%;	
+	font-family: 'Open Sans', sans-serif;
+	font-size:16px;
+	color:#000000;
+	text-align:left;
+	line-height:34px;	
+}
+.rgtrow{
+	width:23%;	
+	font-family: 'Open Sans', sans-serif;
+	font-size:16px;
+	color:#000000;
+	text-align:right;
+	line-height:24px;	
+}
+.rowstyle{
+	border-bottom:1px solid #999;
+	height:30px;
+}
+.shipment-box{
+	border:1px solid #dcf1ff;
+	background:#dcf1ff url(../images/shipping.png) left 8px no-repeat;
+	width:97%;
+	height:42px;
+	margin:0 0 0 9px;
+	padding:0 0;
+}
+.shipping-txt{
+	font-size: 15px;
+	line-height:18px;
+	color:#000000;
+	font-weight:bold;
+	margin:0;
+	padding:13px 0 0 146px;
+	overflow:hidden;
+}
+p.shipping-txt span {
+	color: #a42a5b;
+}
+.arrow{
+	position:absolute;
+	left:12px;
+	top: 445px;
+}
+.lftbtmtxt{
+	font-size: 10px;
+	color: #717171;
+	text-align: justify;
+	line-height: 12px;
+	padding: 133px 0 0 20px;
+	margin:0 0 0 0;
+	width:580px;
+}
+div#tiralmid .rgtform{
+	width:345px;	
+	margin:18px 0 0 8px;
+	padding:0;	
+}
+.trialfrmtop{
+	background:url(../images/trlfrmtop.png)center top no-repeat;
+	height: 140px;
+	width:100%;
+}
+.trialfrmbtm{
+	background:url(../images/trlfrm-btm.png) center top no-repeat;
+	width:100%;
+	height:88px;
+}
+.trialfrmmid{
+	background: url(../images/trlfrm-mid.png) center top repeat-y;
+	width:100%;	
+}
+.sameas{
+	font-family: 'Open Sans', sans-serif;
+	font-size:14px;
+	color:#fff;
+	text-align:center;
+	line-height:19px;
+	padding:3% 0;
+}
+.frmElemts{
+	display:inline-block;
+	float:left;
+	margin:6px 0 8px 35px;
+}	
+.frmElemts input, .frmElemts label, .frmElemts select  {
+	display:inline-block;
+	float:left;
+	height:26px;
+	line-height:26x;		
+}
+.frmElemts label {
+	line-height:26px;
+	width:100%;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:400;
+	font-size:14px;
+	color:#ffffff;
+	text-align:left;
+	margin-right:10px;	
+	}	
+.frmElemts input, .frmElemts select {
+	background:none; 
+	border:none;
+	width:275px;
+	height:32px;
+	background-color:#FFF;
+	outline:none;
+	padding-left: 4px;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+	border:1px solid #b7b7b7;	
+	font-weight:400;
+	font-size:14px;
+	color:#707070;	
+	}
+.frmElemts select{
+	width:275px;
+	height:32px;
+	}
+.frmElemts input.short{
+	width:123px;
+}
+.frmElemts select.short{
+	width:130px;
+	margin-right:9px;
+}
+
+.frmElemts a.footerLink {
+	font-size: 13px;
+	color: white;
+}
+p.whats-this {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 5px;
+}
+
+
+.what, .what a{	
+	font-size:13px;
+	color:#ffde00;
+	text-align:left;
+	line-height:36px;
+	font-style:italic;
+	text-decoration:underline;
+}
+.what a:hover{
+	text-decoration:none;
+	color:#ffde00;
+}
+.frmimg{
+	margin:4% auto;
+	display:block;
+}
+.submit{
+	margin:16px 0 10px 0;
+	background:url(../images/submit-btn.png) center top no-repeat;
+	height:90px;
+	width:312px;
+	cursor:pointer;
+	border:none;
+	outline:none;
+	}
+	
+
+/* start footer */
+div#footer{		
+	width:100%;
+	margin:0 0 0 0;
+	border-top:2px solid #dfdfdf;
+	}
+.ftrtxt{	
+	font-size:14px;
+	color:#969696;
+	text-align:center;
+	line-height:25px;
+	padding:20px 0 40px 0;
+	margin:0;
+	text-transform:uppercase;
+}
+.ftrtxt a, .ftrtxt a:hover{
+	text-decoration:none;
+	color:#474444;
+}
+
+
+/* end footer */
+
+
+img#bottle1 {
+	width: 160px;
+}
+
+
+
+
+
+
+.payment-discount .frmElemts input, .payment-discount .frmElemts select {
+	margin-bottom:0;
+}
+.payment-discount .frmElemts {
+	margin: 5px 0 5px 35px;
+}
+.payment-discount .trialfrmmid{
+	padding-top: 10px;
+}
+.credit-card-wrap {
+	margin-bottom: 0;
+}
+.credit-cards {
+	padding-top: 25px;
+	text-align: center;
+}
+.credit-cards .cards {
+	background: url(../images/creditcards.png)center top no-repeat;
+	height: 40px;
+	width: 60px;
+	background-size: 190px;
+	display: inline-block;
+	vertical-align: top;
+}
+.cards.visa-card {
+	background-position: 0 0;
+}
+.cards.master-card {
+	background-position: -65px 0;
+}
+.cards.discover-card {
+	background-position: -127px 0;
+}
+.credit-cards.visa .master-card,
+.credit-cards.visa .discover-card {
+	opacity: .6;
+}
+.credit-cards.discover .master-card,
+.credit-cards.discover .visa-card {
+	opacity: .6;
+}
+.credit-cards.master .discover-card,
+.credit-cards.master .visa-card {
+	opacity: .6;
+}
+label {
+	display: block;
+	float: none;
+	clear: both;
+	text-align: left;
+	margin-left: 35px;
+	color: white;
+}
+.frmElemts.left-side, .frmElemts.right-side {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0;
+	margin-bottom:10px;
+}
+.frmElemts.left-side {
+	margin-left: 35px;
+}
+
+
+
+
+
+
+
+
+
+
+
+select {
+	background: url(../images/icon-validation.png)top right no-repeat !important;
+	background-position: right 5px top -57px !important;
+	background-color: white !important;
+	background-size: 40px !important;
+	color: #7a7a7a;
+}
+.has-error.has-success select, .has-error select {
+	border: 1px solid grey !important;
+	border-bottom: 3px solid #ff5e45 !important;
+	background: url(../images/icon-validation.png)top right no-repeat !important;
+	background-color: white !important;
+	background-size: 40px !important;
+	background-position: right 5px top -27px !important;
+}
+.has-success select {
+	border: 1px solid grey !important;
+	background-image: url(../images/icon-validation.png) !important;
+	background-size: 40px !important;
+	background-position: right 7px top 6px !important;
+	background-repeat: no-repeat !important;
+}
+
+

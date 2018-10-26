@@ -1,0 +1,57 @@
+<?php
+    $browser = $_SERVER['HTTP_USER_AGENT'];
+    $badBrowsers = array("iPhone", "iPad", "Samsung");
+    $badBrowser = false;
+    $badBrowsersLen = count($badBrowsers);
+
+    for($i = 0; $i < $badBrowsersLen; $i++){
+        if(strpos($browser, $badBrowsers[$i])){
+            $badBrowser = true;
+            break;
+        }
+    }
+?>
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <title>Contact Us</title>
+<meta name="robots" content="none,noarchive,nosnippet,noimageindex" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+
+<body ng-app="Offer" ng-controller="DataController">
+    <div class="content white-popup">
+        <h1>CONTACT US</h1>
+        <p>Customer Service Hours of Operation:</p>
+        <p> <strong>Phone Support:</strong>
+            <br> Monday-Friday 9:00am to 6:00pm EST
+            <br> Phone: <span ng-bind="data.phone"></span>
+        </p>
+
+        <p> <strong>Email Support:</strong>
+            <br> Please Allow 24 Hours For Reply.
+            <br> 
+            
+            <? if($badBrowser == false) { ?>
+                <a data-rel="external" ng-href="{{ 'mailto:' + data.email }}" title="Email Support" ng-bind="data.email"></a>
+           
+        </p>
+        <p><strong>Return Address:</strong><br>
+            <span ng-bind="S1.name"></span>
+            <br>
+            <span ng-bind="data.returnAddress.part1"></span>, 
+            <br>
+            <span ng-bind="data.returnAddress.part2"></span>
+        </p>
+    </div>
+    
+    <!-- Modules -->
+    <!--<script src="/sys25/scripts/app.min.js"></script>-->
+
+    <!-- Controllers -->
+ <script src="/v3/js/controllers/DataController.min.js"></script>
+ </body>
+
+</html>
